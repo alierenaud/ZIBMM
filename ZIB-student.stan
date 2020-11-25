@@ -58,13 +58,13 @@ model {
   p0 ~ normal(0, 100);
   coef_p ~ normal(0, 100);
   
-  coef_b1 ~ normal(m0, eta1);
+  coef_b1 ~ normal(m0, sqrt(eta1));
   eta1 ~ inv_gamma(0.01, 0.01);
   
-  coef_b2 ~ normal(a0, eta2);
+  coef_b2 ~ normal(a0, sqrt(eta2));
   eta2 ~ inv_gamma(0.01, 0.01);
   
-  coef_b3 ~ normal(p0, eta3);
+  coef_b3 ~ normal(p0, sqrt(eta3));
   eta3 ~ inv_gamma(0.01, 0.01);
   
   
